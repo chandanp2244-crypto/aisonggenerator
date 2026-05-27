@@ -1,286 +1,100 @@
-export default function AISongGeneratorWebsite() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white font-sans">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,215,0,0.18),transparent_45%)]"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Powered Music Creation Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white font-sans">
 
-        <div className="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-14 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full px-4 py-2 text-yellow-300 text-sm mb-6">
-              ✨ AI Powered Music Creation Platform
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-black leading-tight">
-              Create Viral
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500"> AI Songs </span>
-              In Seconds
-            </h1>
-
-            <p className="text-zinc-300 text-lg mt-6 leading-relaxed max-w-xl">
-              Generate cinematic bhakti songs, romantic music, reels audio, AI vocals,
-              lyrics, and background music instantly using advanced AI technology.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-10">
-              <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg shadow-2xl hover:scale-105 transition">
-                Generate Song
-              </button>
-
-              <button className="px-8 py-4 rounded-2xl border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 transition text-lg">
-                Watch Demo
-              </button>
-            </div>
-
-            <div className="grid grid-cols-3 gap-5 mt-12">
-              <div className="bg-zinc-900/70 border border-zinc-800 rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-yellow-400">1M+</h3>
-                <p className="text-zinc-400 text-sm mt-1">Songs Created</p>
-              </div>
-
-              <div className="bg-zinc-900/70 border border-zinc-800 rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-pink-400">50K+</h3>
-                <p className="text-zinc-400 text-sm mt-1">Creators</p>
-              </div>
-
-              <div className="bg-zinc-900/70 border border-zinc-800 rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-orange-400">4.9★</h3>
-                <p className="text-zinc-400 text-sm mt-1">User Rating</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Generator Card */}
-          <div className="bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 rounded-[35px] p-8 shadow-2xl">
-            <h2 className="text-3xl font-bold mb-6">AI Song Generator</h2>
-
-            <div className="space-y-5">
-              <textarea
-                placeholder="Describe your song... Example: Create a powerful Lord Shiva bhakti song with emotional female vocals and cinematic music"
-                className="w-full h-36 rounded-2xl bg-black/40 border border-zinc-700 p-5 outline-none focus:border-yellow-500 resize-none"
-              ></textarea>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <select className="bg-black/40 border border-zinc-700 rounded-2xl p-4 outline-none">
-                  <option>Bhakti</option>
-                  <option>Romantic</option>
-                  <option>Sad</option>
-                  <option>LoFi</option>
-                </select>
-
-                <select className="bg-black/40 border border-zinc-700 rounded-2xl p-4 outline-none">
-                  <option>Female Voice</option>
-                  <option>Male Voice</option>
-                  <option>Child Voice</option>
-                </select>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <select className="bg-black/40 border border-zinc-700 rounded-2xl p-4 outline-none">
-                  <option>Hindi</option>
-                  <option>English</option>
-                  <option>Sanskrit</option>
-                </select>
-
-                <select className="bg-black/40 border border-zinc-700 rounded-2xl p-4 outline-none">
-                  <option>Cinematic</option>
-                  <option>Soft Melody</option>
-                  <option>DJ Beat</option>
-                </select>
-              </div>
-
-              <button className="w-full py-5 rounded-2xl bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-400 text-black font-black text-lg hover:scale-[1.02] transition shadow-2xl shadow-orange-500/20">
-                ✨ Generate Full AI Song
-              </button>
-
-              <div className="bg-black/30 border border-zinc-800 rounded-3xl p-5 mt-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold">AI Generation Status</h3>
-                  <span className="text-green-400 text-sm">Ready</span>
-                </div>
-
-                <div className="w-full bg-zinc-800 rounded-full h-3 overflow-hidden">
-                  <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 h-full w-3/4 rounded-full"></div>
-                </div>
-
-                <p className="text-zinc-400 text-sm mt-3">
-                  Lyrics • Music • Vocals • Mastering • MP3 Export
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mt-4">
-                <button className="bg-zinc-800 hover:bg-zinc-700 transition rounded-2xl py-4 font-semibold">
-                  ▶ Preview Audio
-                </button>
-
-                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-2xl py-4 font-black hover:scale-105 transition">
-                  ⬇ Download MP3
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Studio Dashboard */
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-[35px] p-8">
-            <div className="flex items-center justify-between mb-8">
-              <div>
-                <h2 className="text-4xl font-black">Your AI Music Studio</h2>
-                <p className="text-zinc-400 mt-2">Generate cinematic devotional songs instantly.</p>
-              </div>
-
-              <div className="bg-green-500/10 border border-green-500/20 text-green-400 px-5 py-2 rounded-full">
-                AI Online
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-5">
-              <div className="bg-black/30 border border-zinc-800 rounded-3xl p-6">
-                <div className="text-4xl">🎵</div>
-                <h3 className="text-3xl font-black mt-4">128</h3>
-                <p className="text-zinc-400 mt-2">Songs Created</p>
-              </div>
-
-              <div className="bg-black/30 border border-zinc-800 rounded-3xl p-6">
-                <div className="text-4xl">🔥</div>
-                <h3 className="text-3xl font-black mt-4">24</h3>
-                <p className="text-zinc-400 mt-2">Trending Reels</p>
-              </div>
-
-              <div className="bg-black/30 border border-zinc-800 rounded-3xl p-6">
-                <div className="text-4xl">⚡</div>
-                <h3 className="text-3xl font-black mt-4">AI Fast</h3>
-                <p className="text-zinc-400 mt-2">High Speed Render</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-b from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-[35px] p-8">
-            <h2 className="text-3xl font-black">Quick Create</h2>
-
-            <div className="space-y-4 mt-8">
-              <button className="w-full bg-black/40 hover:bg-black/60 transition border border-zinc-800 rounded-2xl py-5 text-left px-5">
-                🕉 Shiva Bhakti Song
-              </button>
-
-              <button className="w-full bg-black/40 hover:bg-black/60 transition border border-zinc-800 rounded-2xl py-5 text-left px-5">
-                💖 Romantic Melody
-              </button>
-
-              <button className="w-full bg-black/40 hover:bg-black/60 transition border border-zinc-800 rounded-2xl py-5 text-left px-5">
-                🔥 Viral Reel Music
-              </button>
-
-              <button className="w-full bg-black/40 hover:bg-black/60 transition border border-zinc-800 rounded-2xl py-5 text-left px-5">
-                🎬 Cinematic Background
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      /* Features */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-black">Powerful AI Features</h2>
-          <p className="text-zinc-400 mt-4 text-lg">
-            Everything you need to create professional viral music.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              title: 'AI Lyrics',
-              desc: 'Generate emotional and cinematic lyrics instantly.',
-              icon: '✍️',
-            },
-            {
-              title: 'AI Singing',
-              desc: 'Human-like AI male and female singing voices.',
-              icon: '🎤',
-            },
-            {
-              title: 'Music Composer',
-              desc: 'Automatic background music and beats generation.',
-              icon: '🎵',
-            },
-            {
-              title: 'Video Ready',
-              desc: 'Perfect for YouTube Shorts and Instagram Reels.',
-              icon: '🎬',
-            },
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-yellow-500/40 transition"
-            >
-              <div className="text-5xl mb-5">{feature.icon}</div>
-              <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Personal Features */
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-[40px] p-10 text-center">
-          <h2 className="text-5xl font-black">Personal AI Music Studio</h2>
-          <p className="text-zinc-300 text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
-            This website is specially designed for personal use. Create unlimited bhakti songs,
-            romantic tracks, cinematic reels music, devotional vocals, and AI-generated lyrics
-            directly from your browser without any complicated setup.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-black/30 border border-zinc-800 rounded-3xl p-6">
-              <div className="text-5xl mb-4">🎶</div>
-              <h3 className="text-2xl font-bold">Unlimited Songs</h3>
-              <p className="text-zinc-400 mt-3">
-                Generate as many AI songs as you want for personal projects.
-              </p>
-            </div>
-
-            <div className="bg-black/30 border border-zinc-800 rounded-3xl p-6">
-              <div className="text-5xl mb-4">🕉️</div>
-              <h3 className="text-2xl font-bold">Bhakti Special</h3>
-              <p className="text-zinc-400 mt-3">
-                Perfect for Shiva, Durga, Krishna, Ram and devotional content.
-              </p>
-            </div>
-
-            <div className="bg-black/30 border border-zinc-800 rounded-3xl p-6">
-              <div className="text-5xl mb-4">🎬</div>
-              <h3 className="text-2xl font-bold">Reels Ready</h3>
-              <p className="text-zinc-400 mt-3">
-                Create viral short music clips for YouTube Shorts and Instagram Reels.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      /* Footer */ */}
-      <footer className="border-t border-zinc-800 mt-16">
-        <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-5">
-          <div>
-            <h2 className="text-2xl font-black text-yellow-400">Divine AI Music</h2>
-            <p className="text-zinc-500 mt-2">Create next-generation AI songs with one click.</p>
-          </div>
-
-          <div className="flex gap-6 text-zinc-400">
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Contact</a>
-          </div>
-        </div>
-      </footer>
+    <div class="relative max-w-7xl mx-auto px-6 py-24 text-center">
+        <h1 class="text-5xl md:text-7xl font-black leading-tight">
+            Create Viral <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500">In Seconds</span>
+        </h1>
+        <p class="text-zinc-300 text-lg mt-6 max-w-xl mx-auto">
+            Generate cinematic bhakti songs, romantic music, reels audio, and AI vocals instantly.
+        </p>
     </div>
-  )
-}
 
+    <div class="max-w-2xl mx-auto bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 rounded-[25px] p-8 shadow-2xl mb-24">
+        <h2 class="text-3xl font-bold mb-6">🎵 AI Song Generator</h2>
+        
+        <div class="space-y-5">
+            <div>
+                <label class="block text-sm font-medium text-zinc-400 mb-2">Describe your song:</label>
+                <textarea id="songPrompt" class="w-full h-36 rounded-2xl bg-black/40 border border-zinc-700 p-5 outline-none focus:border-yellow-500 text-white" placeholder="Example: Create a powerful Lord Shiva bhakti song with emotional flute..."></textarea>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <select id="genre" class="bg-black/40 border border-zinc-700 rounded-2xl p-4 outline-none text-white">
+                    <option value="Bhakti">Bhakti</option>
+                    <option value="Romantic">Romantic</option>
+                    <option value="Sad">Sad</option>
+                    <option value="LoFi">LoFi</option>
+                </select>
+
+                <select id="voice" class="bg-black/40 border border-zinc-700 rounded-2xl p-4 outline-none text-white">
+                    <option value="Female">Female Voice</option>
+                    <option value="Male">Male Voice</option>
+                </select>
+            </div>
+
+            <button id="generateBtn" onclick="generateSong()" class="w-full px-8 py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg hover:opacity-90 transition cursor-pointer">
+                Generate Song
+            </button>
+
+            <div id="statusResult" class="mt-6 text-center hidden">
+                <p id="statusText" class="text-yellow-400 font-semibold"></p>
+                <audio id="audioPlayer" controls class="w-full mt-4 hidden"></audio>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function generateSong() {
+            const prompt = document.getElementById('songPrompt').value;
+            const genre = document.getElementById('genre').value;
+            const voice = document.getElementById('voice').value;
+            const button = document.getElementById('generateBtn');
+            const statusResult = document.getElementById('statusResult');
+            const statusText = document.getElementById('statusText');
+            const audioPlayer = document.getElementById('audioPlayer');
+
+            if (!prompt.trim()) {
+                alert("Please enter a description for your song!");
+                return;
+            }
+
+            // Button ko disable karna taaki user baar-baar click na kare
+            button.disabled = true;
+            button.innerText = "Generating Music... Please wait";
+            statusResult.classList.remove('hidden');
+            audioPlayer.classList.add('hidden');
+            statusText.innerText = "⚡ AI is composing your " + genre + " song (" + voice + ")...";
+
+            try {
+                // NOTE: Yahan asli Suno/Udio ki Paid API ka URL aata hai. 
+                // Abhi test karne ke liye hum ek dummy background music link use kar rahe hain.
+                
+                setTimeout(() => {
+                    // Gaana banne ka acting simulator (3 second baad gaana chalega)
+                    statusText.innerText = "✅ Your song is ready! Click play below:";
+                    
+                    // Ek sample free music track loading (Testing ke liye)
+                    audioPlayer.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"; 
+                    audioPlayer.classList.remove('hidden');
+                    
+                    button.disabled = false;
+                    button.innerText = "Generate Another Song";
+                }, 4000); // 4 seconds delay
+
+            } catch (error) {
+                statusText.innerText = "❌ Error generating song. Try again.";
+                button.disabled = false;
+                button.innerText = "Generate Song";
+            }
+        }
+    </script>
+</body>
+</html>
